@@ -196,18 +196,25 @@ h2 {
   width: 35%;
 }
 
-.hero__image, .hero__mobiles_image {
-  width: 80%;
+.hero__images {
+  height: 100%;
+  width: 100%;
+}
+
+.hero__image {
   position: absolute;
-  right: -25%;
-  bottom: -13%;
+  width: 113%;
+  height: 157%;
+  right: -50%;
+  top: -33%;
 }
 
 .hero__mobiles_image {
-  width: 45%;
-  top: -30%;
-  right: -8%;
-  bottom: unset;
+  position: absolute;
+  right: -10%;
+  top: -15%;
+  width: 52%;
+  height: 142%;
 }
 
 .hero__button {
@@ -391,16 +398,6 @@ h2 {
 @media (max-width: 1150px) {
   html {
     font-size: 53%;
-  }
-  .hero__mobiles_image {
-    width: 60%;
-    top: -50px;
-  }
-  .hero__image {
-    width: 95%;
-    position: absolute;
-    right: -36%;
-    bottom: -13%;
   }
 }
 

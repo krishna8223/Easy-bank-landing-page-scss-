@@ -147,20 +147,41 @@ h2{
             color: $text-color;
             width: 35%;
         }
-
-        &__image , &__mobiles_image{
-            width: 80%;
+        &__images{
+            // position: relative;
+            height: 100%;
+            width: 100%;
+        }
+        &__image{
             position: absolute;
-            // top: -38%;
-            right: -25%;
-            bottom: -13%;
+    width: 113%;
+    height: 157%;
+    right: -50%;
+    top: -33%;
         }
         &__mobiles_image{
-            width: 45%;
-            top: -30%;
-            right: -8%;
-            bottom: unset;
+            position: absolute;
+            right: -10%;
+            top: -15%;
+            width: 52%;
+            height: 142%;
         }
+
+
+
+        // &__image , &__mobiles_image{
+        //     // width: 80%;
+        //     position: absolute;
+        //     // top: -38%;
+        //     // right: -25%;
+        //     // bottom: -13%;
+        // }
+        // &__mobiles_image{
+        //     // width: 45%;
+        //     // top: -30%;
+        //     // right: -8%;
+        //     bottom: unset;
+        // }
 
         &__button{
             height: 4.5rem;
@@ -324,16 +345,16 @@ h2{
         font-size:53%;
     }
 
-    .hero__mobiles_image{
-        width: 60%;
-        top: -50px;
-    }
-    .hero__image{
-        width: 95%;
-    position: absolute;
-    right: -36%;
-    bottom: -13%;
-    }
+    // .hero__mobiles_image{
+    //     width: 60%;
+    //     top: -50px;
+    // }
+    // .hero__image{
+    //     width: 95%;
+    // position: absolute;
+    // right: -36%;
+    // bottom: -13%;
+    // }
 }
 
 @media(max-width:950px){
@@ -347,5 +368,5 @@ h2{
 }
 
 @media(max-width:900px){
-    
+
 }
