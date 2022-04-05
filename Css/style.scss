@@ -1,0 +1,351 @@
+$text-color: hsl(233, 8%, 62%);
+$blue-text-coor:hsl(233, 26%, 24%);
+
+@mixin flex($direction,$justify,$align){
+    display: flex;
+    flex-direction:$direction;
+    justify-content:$justify;
+    align-items:$align;
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Public Sans', sans-serif;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+.container {
+  width: 80%;
+  margin: 0 auto;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+}
+
+p{
+    font-size: 1.9rem;
+            line-height: 150%;
+            letter-spacing: .6px;
+            color: $text-color;
+}
+
+h2{
+    color: $blue-text-coor;
+        font-weight: 300;
+        font-size: 4rem;
+}
+
+.button{
+    cursor: pointer;
+    border: none;
+    background-image: linear-gradient(to right,hsl(136, 65%, 51%),hsl(192, 70%, 51%));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    padding: 1rem;
+    height: 58%;
+    width: 14rem;
+    font-size: 1.5rem;
+    background-color: cyan;
+    border-radius: 20px;
+    transition: all .1s;
+
+    &:hover{
+        opacity: .6;
+    }
+}
+
+.colors {
+  color: hsl(233, 26%, 24%);
+  color: hsl(136, 65%, 51%);
+  color: hsl(192, 70%, 51%);
+  color: hsl(233, 8%, 62%);
+  color: hsl(220, 16%, 96%);
+  color: hsl(0, 0%, 98%);
+  color: hsl(0, 0%, 100%);
+}
+.nav{
+
+    display: flex;
+    height: 70px;
+    align-items: center;
+    justify-content: space-between;
+
+    &__menu{
+        height: 100%;
+        gap: 2rem;
+        display: flex;
+    }
+
+    &__items {
+        height: 100%;
+        font-size: 1.6rem;
+        color: hsl(233, 8%, 62%);
+        @include flex(row,unset,center);
+        gap: 2rem;
+    }
+   
+    &__links{
+        height: 100%;
+        @include flex(row,unset,center);
+        letter-spacing: 1px;
+        display: flex;
+        align-items: center;
+        position: relative;
+        color: $text-color;
+        text-decoration: none;
+
+        &:after{
+            content: '';
+            position: absolute;
+            height: 100%;
+            border-bottom: .4rem solid;
+            width: 0;
+            bottom: 0;
+            left: 0;
+            border-image: linear-gradient(to right,hsl(136, 65%, 51%),hsl(192, 70%, 51%)) 1;
+            transition: .3s;
+        }
+
+        &:hover::after{
+            width: 100%;
+        }
+
+        &:hover{
+            color: black;
+        }
+    }
+}
+
+.hero{
+    // background-color: hsl(220, 16%, 96%);
+    background-color: hsl(0, 0%, 98%);
+    position: relative;
+    height:  70vh;
+    @include flex(column,center ,unset );
+    clip-path: inset( -0 -100vh -100vh 0 );
+        
+        &__main_heading{
+            font-size: 6rem;
+            font-weight:500;
+            width: 35%;
+            margin-bottom: 3rem;
+            color: $blue-text-coor;
+        }
+
+        &__info{
+            font-size: 1.9rem;
+            line-height: 150%;
+            letter-spacing: .6px;
+            color: $text-color;
+            width: 35%;
+        }
+
+        &__image , &__mobiles_image{
+            width: 80%;
+            position: absolute;
+            // top: -38%;
+            right: -25%;
+            bottom: -13%;
+        }
+        &__mobiles_image{
+            width: 45%;
+            top: -30%;
+            right: -8%;
+            bottom: unset;
+        }
+
+        &__button{
+            height: 4.5rem;
+            margin-top: 4rem;
+        }
+}
+
+.bank_functions{
+    background-color: hsl(220, 16%, 96%);
+}
+.functions{
+    padding: 11rem 0;
+    &__heading{
+        color: $blue-text-coor;
+        font-weight: 300;
+        font-size: 4rem;
+        margin-bottom: 2rem;
+    }
+
+    &__info{
+        width: 50%;
+        margin-bottom: 5rem;
+    }
+}
+.functions__all_functions{
+    // display: flex;
+    display: grid;
+    grid-template-columns: repeat(4 , 1fr);
+    gap: 3rem;
+}
+.all_functions{
+    // display: flex;
+
+    &__image{
+        height: 9rem;
+        width: 9rem;
+    }
+
+    &__heading{
+        font-size: 2.4rem;
+        margin: 3rem 0;
+    }
+    &__info{
+        font-style: 1.8rem;
+        letter-spacing: normal;
+    }
+}
+.articles_section{
+    background-color: #fafafa;
+    // background-color: red;
+}
+.articles{
+    padding: 11rem 0;
+
+    &__heading{
+        margin-bottom: 5rem;
+    }
+
+    &__wrapper{
+        display: flex;
+        gap: 4rem;
+    }
+
+    &__single_article{
+        background-color: #fff;
+    }
+
+    &__image{
+        height: 50%;
+        width: 100%;
+    }
+
+    &__detail{
+        padding: 3rem;
+    }
+
+    &__author{
+        font-size: 1.2rem;
+        color: $text-color;
+        margin: -.5rem  0 1rem 0;
+    }
+
+    &__topic{
+        font-size: 1.6rem;
+        color: $blue-text-coor;
+        font-weight: 200;
+        margin-bottom: 1rem;
+        transition: .2s;
+        cursor: pointer;
+
+        &:hover{
+            color:hsl(192, 70%, 51%) ;
+        }
+    }
+
+    &__main{
+        font-size: 1.3rem;
+        color: $text-color;
+    }
+}
+.footer_links{
+    background-color: hsl(233, 26%, 24%);
+    padding: 4rem
+}
+
+.footer{
+    @include flex(row,space-between,space-between);
+    
+    &__logo{
+        display: grid;
+        grid-row-gap: 4rem;
+
+        figure{
+            height: 3rem;
+        }
+    }
+
+    &__social{
+        display: flex;
+        gap: 30px;
+    }
+    &__social_links {
+        list-style: none;
+    }
+    &__items{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-column-gap: 2rem;
+        grid-row-gap: 4rem;
+        place-items: center;
+    }
+
+    &__links{
+        color: #fff;
+        text-decoration: none;
+        font-size: 1.4rem;
+        transition: .3s;
+
+            &:hover{
+                color: hsl(192, 70%, 51%) ;
+            }
+    }
+
+    &__button{
+        width: 22rem;
+    }
+    &__rights{
+        margin-top: 3rem;
+        font-size: 1.5rem;
+    }
+
+    &__c{
+
+    }
+
+    
+}
+
+@media(max-width:1150px){
+    html{
+        font-size:53%;
+    }
+
+    .hero__mobiles_image{
+        width: 60%;
+        top: -50px;
+    }
+    .hero__image{
+        width: 95%;
+    position: absolute;
+    right: -36%;
+    bottom: -13%;
+    }
+}
+
+@media(max-width:950px){
+    .container{
+        width: 90%;
+    }
+    .hero__main_heading ,.hero__info{
+        width: 50%;
+    }
+    
+}
+
+@media(max-width:900px){
+    
+}
