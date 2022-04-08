@@ -21,6 +21,17 @@ body {
     overflow-x: hidden;
 }
 
+.top-scroll{
+    background-image: linear-gradient(to right, hsl(136, 65%, 51%), hsl(192, 70%, 51%));
+    height: 10px;
+    position: fixed;
+    border-bottom: 1px solid $blue-text-coor;
+    border-radius: 0 3px 3px 0;
+    top: 0;
+    left: 0;
+
+}
+
 // -------------------------------------Common classes ---------------------
 
 .nav__menu.show {
@@ -493,6 +504,9 @@ h2 {
     }
 }
 @media (max-width: 525px) {
+    .top-scroll{
+        height: 5px;
+    }
     .functions__all_functions,
     .articles__wrapper,
     .footer {

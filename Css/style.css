@@ -15,6 +15,17 @@ body {
   overflow-x: hidden;
 }
 
+.top-scroll {
+  background-image: -webkit-gradient(linear, left top, right top, from(#31d35c), to(#2bb7da));
+  background-image: linear-gradient(to right, #31d35c, #2bb7da);
+  height: 10px;
+  position: fixed;
+  border-bottom: 1px solid #2d314d;
+  border-radius: 0 3px 3px 0;
+  top: 0;
+  left: 0;
+}
+
 .nav__menu.show {
   -webkit-transition: 0.3s;
   transition: 0.3s;
@@ -580,6 +591,9 @@ h2 {
 }
 
 @media (max-width: 525px) {
+  .top-scroll {
+    height: 5px;
+  }
   .functions__all_functions,
   .articles__wrapper,
   .footer {
